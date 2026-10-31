@@ -1,0 +1,30 @@
+name: WristPiano
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    watchOS: "10.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "0.1"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  WristPiano:
+    type: application
+    platform: watchOS
+    sources:
+      - WristPiano
+    info:
+      path: WristPiano/Info.plist
+      properties:
+        CFBundleDisplayName: 腕上钢琴
+        WKApplication: true
+        WKWatchOnly: true
+        NSMotionUsageDescription: 用加速度计和陀螺仪识别手指敲击，并把手腕方向映射成音高。
+        WKBackgroundModes:
+          - physical-therapy
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.wristpiano
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "4"
